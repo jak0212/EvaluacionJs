@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración del conjunto de caracteres y la escala inicial del viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Enlace al archivo de estilo externo -->
+    <link rel="stylesheet" href="Estilos/style.css">
+
+    <!-- Título de la página -->
+    <title>Recetas de Cocina</title>
+</head>
+
+<body>
+    <!-- Contenedor principal de la aplicación -->
+    <div id="app">
+
+        <!-- Encabezado de la página -->
+        <header>
+            <h1>Recetas de Cocina</h1>
+        </header>
+
+        <!-- Formulario para ingresar información de la receta -->
+        <form id="recipe-form">
+
+            <!-- Etiqueta y lista desplegable para seleccionar el plato principal -->
+            <label for="select-recipe">Seleccione un plato :</label>
+            <select id="select-recipe" name="select-recipe">
+                <!-- Opción por defecto y opciones para diferentes platos -->
+                <option value="Seleccione">-Seleccione un plato-</option>
+                <option value="ensalada">Carne sudada</option>
+                <option value="pasta">Espaguetis</option>
+                <option value="pollo">Pollo Asado</option>
+                <option value="sopa">Arroz con pollo</option>
+            </select>
+
+            <!-- Etiqueta y campo de entrada para la cantidad de la receta principal -->
+            <label for="recipe-quantity">Cantidad:</label>
+            <input type="number" id="recipe-quantity" name="recipe-quantity" min="1" value="0">
+
+            <!-- Etiqueta y lista desplegable para seleccionar la receta adicional (guarnición) -->
+            <label for="select-side-dish">Receta adicional:</label>
+            <select id="select-side-dish" name="select-side-dish">
+                <!-- Opción por defecto y opciones para diferentes recetas adicionales -->
+                <option value="Seleccione"> -Seleccione un adicional-</option>
+                <option value="arroz">Arroz</option>
+                <option value="papas">Papas Fritas</option>
+                <option value="patacon">Patacon</option>
+                <option value="pure">Pure de papa</option>
+            </select>
+
+            <!-- Etiqueta y campo de entrada para la cantidad de la receta adicional -->
+            <label for="side-dish-quantity">Cantidad:</label>
+            <input type="number" id="side-dish-quantity" name="side-dish-quantity" min="1" value="0">
+
+            <!-- Contenedor para el resumen de la receta, lista y costo total -->
+            <div id="recipe-summary">
+                <h2>Resumen de la Receta</h2>
+                <!-- Lista que se llenará con detalles de las recetas agregadas -->
+                <ul id="recipe-list"></ul>
+                <!-- Elemento que mostrará el costo total acumulado -->
+                <div id="total-price">Total: $0</div>
+            </div>
+
+            <!-- Botón para agregar la receta al resumen -->
+            <button type="button" id="add-to-recipe">Agregar a la Receta</button><br>
+
+            <!-- Botón de envío del formulario -->
+            <button type="submit" id="submit-recipe">Enviar Receta</button>
+
+        </form>
+    </div>
+
+    <!-- Inclusión del script de JavaScript externo -->
+    <script src="js/proyectoRestaurante.js"></script>
+</body>
+
+</html>
